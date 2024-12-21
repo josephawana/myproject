@@ -1,0 +1,177 @@
+@charset "utf-8";
+
+/* Grid Container Styles */
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* Two columns layout */
+  gap: 20px;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns layout */
+  gap: 20px;
+  padding: 20px;
+}
+
+.grid-item {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item img {
+  max-width: 90%; /* Reduce the image size to 90% */
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.grid-item h2, .grid-item h3 {
+  color: #e74c3c; /* Red */
+  margin-bottom: 10px;
+}
+
+.grid-item p {
+  color: #2c3e50; /* Dark Blue */
+}
+
+/* Navigation Styles */
+nav {
+  grid-column: 1; /* Place navigation in the first column */
+  background: #343a40;
+  padding: 20px;
+  border-radius: 8px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute items evenly */
+  height: 100%; /* Fill the available height */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  flex-grow: 1; /* Allow the list to grow and fill the space */
+}
+
+nav ul li {
+  margin-bottom: 20px; /* Increased spacing between items */
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em; /* Increased font size */
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Article Styles */
+article {
+  grid-column: 2; /* Place article content in the second column */
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #ff6347; /* Tomato color for the button */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+input[type="submit"]:hover {
+  background-color: #e5533d; /* Darker tomato color on hover */
+}
+
+/* About Images Styles */
+.about-images {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.about-images img {
+  width: 30%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* General Styles */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #e9ecef;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive Styles */

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Order</title>
+    <link href="menu_style.css" rel="stylesheet">
+    <link href="Menu_grids.css" rel="stylesheet">
+    <link href="layout.css" rel="stylesheet">
+    <script>
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        function displayOrderItem() {
+            const item = getQueryParam('item');
+            const itemName = {
+                'chorizo_sliders': 'Chorizo Sliders',
+                'o_face_dessert': 'O Face Dessert',
+                'mole_verde_burrito': 'Mole Verde Carnita Burrito with Sofritos'
+            }[item] || 'Unknown Item';
+
+            document.getElementById('order-item').textContent = itemName;
+        }
+
+        window.onload = displayOrderItem;
+    </script>
+</head>
+<body>
+    <header>
+        <h1 class="title">Sliders</h1>
+    </header>
+    <section class="main-content">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu2.html">Menu</a></li>
+                <li><a href= "order.html">Cart</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h1>Add item to Cart</h1>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3><a href="order.html?item=chorizo_sliders">Chorizo Sliders</a></h3>
+                    <img src="chorizo_sliders.png" alt="Chorizo Sliders">
+                </div>
+                <div class="grid-item">
+                    <h3><a href="order.html?item=o_face_dessert">O Face Dessert</a></h3>
+                    <img src="cinn.png" alt="O Face Dessert">
+                </div>
+                <div class="grid-item">
+                    <h3><a href="order.html?item=mole_verde_burrito">Mole Verde Carnita Burrito with Sofritos</a></h3>
+                    <img src="mvbb.png" alt="Mole Verde Carnita Burrito with Sofritos">
+                </div>
+            </div>
+        </article>
+        <h2 id="order-item">Loading...</h2>
+        <form>
+            <!-- Add form fields for ordering here -->
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10">
+            <button type="submit">Order Now</button>
+        </form>
+    </section>
+    <footer>
+        <a href="mailto:Josephawana@gmail.com">Contact</a>
+    </footer>
+</body>
+</html>
